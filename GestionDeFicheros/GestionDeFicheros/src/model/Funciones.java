@@ -99,8 +99,7 @@ public class Funciones {
         String pdfPath = path + File.separator + fileName.replace(".txt", "") + ".pdf";
         Document document;
         document = new Document();
-        try {
-            // Corregido: se debe pasar el documento correcto a PdfWriter.getInstance
+        try {  
             PdfWriter.getInstance(document, new FileOutputStream(pdfPath));
             document.open();
             document.add(new Paragraph(textContent));

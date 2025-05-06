@@ -124,6 +124,21 @@ public class main {
                         System.out.println("Contenido actualizado:\n" + actualizado);
                         break;
                         
+                        
+                    case 10:
+                        System.out.print("Introduce la ruta: ");
+                        path = sc.nextLine();
+                        System.out.print("Introduce el nombre del archivo: ");
+                        fileName = sc.nextLine();
+                        try {
+                            Funciones.printPDF(path, fileName);
+                            System.out.println("PDF creado correctamente.");
+                        } catch (Exception e) {
+                            System.out.println("Error al crear el PDF: " + e.getMessage());
+                        }
+                        break;
+                
+                        
                 
                     case 0:
                     System.out.println("Fin del programa.");
